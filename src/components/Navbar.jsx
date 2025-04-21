@@ -149,9 +149,7 @@ const Navbar = () => {
         <div style={navStyles.navInner}>
           <div style={navStyles.logoContainer}>
             <FontAwesomeIcon icon={faCouch} style={navStyles.logoIcon} />
-            <span style={isMobile && isOpen ? navStyles.mobileLogoText : navStyles.logoText}>
-              Urban Associates
-            </span>
+            <a href="/" style={{ ...navStyles.logoText, textDecoration: 'none' }}>Urban Associates</a>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -209,12 +207,12 @@ const Navbar = () => {
         <>
           <div style={navStyles.mobileMenu}>
             <div style={{ display: 'flex', flexDirection: 'column', padding: '1rem', gap: '1rem' }}>
-              <div style={{ 
-                display: 'flex', 
-                justifyContent: 'space-between', 
-                alignItems: 'center', 
-                paddingBottom: '1rem', 
-                borderBottom: `1px solid ${isDarkMode ? '#333' : '#e5e7eb'}` 
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                paddingBottom: '1rem',
+                borderBottom: `1px solid ${isDarkMode ? '#333' : '#e5e7eb'}`
               }}>
                 <span style={navStyles.mobileLogoText}>
                   Urban Associates
@@ -232,10 +230,10 @@ const Navbar = () => {
                   </button>
                   <button
                     onClick={() => setIsOpen(false)}
-                    style={{ 
-                      padding: '0.5rem', 
-                      backgroundColor: 'transparent', 
-                      border: 'none', 
+                    style={{
+                      padding: '0.5rem',
+                      backgroundColor: 'transparent',
+                      border: 'none',
                       cursor: 'pointer',
                       color: isDarkMode ? '#ffffff' : '#9ca3af'
                     }}

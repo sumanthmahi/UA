@@ -4,7 +4,7 @@ import { useTheme } from '../context/ThemeContext';
 
 const HeroSection = () => {
   const { isDarkMode } = useTheme();
-  
+
   return (
     <section style={{
       position: 'relative',
@@ -16,7 +16,7 @@ const HeroSection = () => {
       color: '#ffffff',
       overflow: 'hidden',
       marginTop: '-4rem',
-      backgroundColor: 'transparent',
+      backgroundColor: 'rgba(0, 0, 0, 0.1)',
       transition: 'background-color 0.3s'
     }}>
       <div style={{
@@ -28,7 +28,7 @@ const HeroSection = () => {
         backgroundImage: 'url("https://images.unsplash.com/photo-1618219944342-824e40a13285?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        animation: 'zoomIn 20s infinite alternate', 
+        animation: 'zoomIn 20s infinite alternate',
         zIndex: 0,
       }}></div>
 
@@ -66,30 +66,30 @@ const HeroSection = () => {
           Transform Your Space with Elegance
         </h1>
         <p style={{
-            fontSize: 'clamp(1rem, 2vw, 1.25rem)',
-            color: '#e5e7eb',
-            maxWidth: '600px',
-            margin: '0 auto 2rem',
-            lineHeight: '1.6'
-          }}>
-            Redefining interior spaces with innovative, client-focused designs that inspire and transform.
-          </p>
+          fontSize: 'clamp(1rem, 2vw, 1.25rem)',
+          color: '#e5e7eb',
+          maxWidth: '600px',
+          margin: '0 auto 2rem',
+          lineHeight: '1.6'
+        }}>
+          Redefining interior spaces with innovative, client-focused designs that inspire and transform.
+        </p>
         <motion.button
-                   whileHover={{ scale: 1.05 }}
-                   whileTap={{ scale: 0.95 }}
-                   style={{
-                     backgroundColor: 'transparent',
-                     color: '#ffffff',
-                     border: '1px solid #ffffff',
-                     padding: '0.75rem 2rem',
-                     fontSize: '1rem',
-                     cursor: 'pointer',
-                     transition: 'all 0.3s ease',
-                     borderRadius: '2px'
-                   }}
-                 >
-                   Explore Our Work
-                 </motion.button>
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          style={{
+            backgroundColor: 'transparent',
+            color: '#ffffff',
+            border: '1px solid #ffffff',
+            padding: '0.75rem 2rem',
+            fontSize: '1rem',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease',
+            borderRadius: '2px'
+          }}
+        >
+          Explore Our Work
+        </motion.button>
       </div>
 
       <style>
