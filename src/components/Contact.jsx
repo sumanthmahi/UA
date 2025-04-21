@@ -308,7 +308,7 @@ const Contact = () => {
               ></iframe>
             </motion.div>
             <StyledButton
-              onClick={() => alert('Redirect to scheduling tool (e.g., Calendly)')}
+              onClick={() => alert('functionality not implemented yet')}
               afterContent="Schedule Now"
             >
               Book a Free Consultation

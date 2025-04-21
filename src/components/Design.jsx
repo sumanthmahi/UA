@@ -347,7 +347,7 @@ const Design = () => {
       <section style={{
         position: 'relative',
         height: 'clamp(30vh, 50vw, 40vh)',
-        background: isDarkMode ? 
+        background: isDarkMode ?
           'linear-gradient(135deg, #000000 0%, #1a1a1a 100%)' :
           'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
         overflow: 'hidden'
@@ -428,7 +428,7 @@ const Design = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 whileHover={{
                   y: -8,
-                  boxShadow: isDarkMode ? 
+                  boxShadow: isDarkMode ?
                     '0 12px 24px rgba(255, 255, 255, 0.1)' :
                     '0 12px 24px rgba(0, 0, 0, 0.1)',
                   transition: { duration: 0.3 }
@@ -438,7 +438,7 @@ const Design = () => {
                   borderRadius: '16px',
                   padding: 'clamp(1rem, 3vw, 2rem)',
                   border: `1px solid ${isDarkMode ? '#333333' : '#e2e8f0'}`,
-                  boxShadow: isDarkMode ? 
+                  boxShadow: isDarkMode ?
                     '0 4px 6px rgba(255, 255, 255, 0.05)' :
                     '0 4px 6px rgba(0, 0, 0, 0.05)',
                   display: 'flex',
@@ -457,7 +457,7 @@ const Design = () => {
                   alignItems: 'center',
                   justifyContent: 'center',
                   backgroundColor: isDarkMode ? '#333333' : '#ffffff',
-                  boxShadow: isDarkMode ? 
+                  boxShadow: isDarkMode ?
                     '0 2px 4px rgba(255, 255, 255, 0.05)' :
                     '0 2px 4px rgba(0, 0, 0, 0.05)'
                 }}>
@@ -1022,6 +1022,7 @@ const Design = () => {
             </p>
             <StyledButton
               afterContent="Book Now"
+              onClick={() => alert('functionality not implemented yet')}
             >
               Schedule a Consultation
             </StyledButton>
