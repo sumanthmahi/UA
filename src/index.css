@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* This accounts for the fixed navbar */
+}
+
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }

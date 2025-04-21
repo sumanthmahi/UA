@@ -128,10 +128,22 @@ const Navbar = () => {
   // Navigation links data
   const navLinks = [
     { name: 'Blogs', href: '/blogs' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Services', href: '#services' },
+    { name: 'About', href: '#about' },
+    { name: 'Contact', href: '#contact' }
   ];
+
+  const scrollToSection = (href) => {
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -161,6 +173,15 @@ const Navbar = () => {
                   href={link.href}
                   style={navStyles.navLink}
                   className="nav-link-hover"
+                  onClick={(e) => {
+                    if (link.href.startsWith('#')) {
+                      e.preventDefault(); // Prevent default anchor behavior
+                      scrollToSection(link.href);
+                      if (isMobile) {
+                        setIsOpen(false); // Close mobile menu after click
+                      }
+                    }
+                  }}
                 >
                   {link.name}
                 </a>
@@ -249,7 +270,15 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   style={navStyles.mobileLink}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => {
+                    if (link.href.startsWith('#')) {
+                      e.preventDefault();
+                      scrollToSection(link.href);
+                      setIsOpen(false);
+                    } else {
+                      setIsOpen(false);
+                    }
+                  }}
                 >
                   {link.name}
                 </a>

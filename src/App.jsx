@@ -26,11 +26,11 @@ function App() {
             <Route path="/" element={
               <>
                 <HeroSection />
-                <About />
+                <div id="about"><About /></div>
                 <Blogs />
-                <Services />
+                <div id="services"><Services /></div>
                 <Design />
-                <Contact />
+                <div id="contact"><Contact /></div>
                 <Footer />
               </>
             } />
