@@ -281,7 +281,7 @@ const Contact = () => {
             </h3>
             <motion.div {...fadeIn} style={{ marginBottom: '2rem' }}>
               <p style={{ fontSize: '1rem', color: isDarkMode ? '#d1d5db' : '#4b5563', marginBottom: '0.5rem' }}>
-                <strong>Email:</strong> offical mal
+                <strong>Email:</strong> Mail ID
               </p>
               <p style={{ fontSize: '1rem', color: isDarkMode ? '#d1d5db' : '#4b5563', marginBottom: '0.5rem' }}>
                 <strong>Phone:</strong> +91 0000000000
