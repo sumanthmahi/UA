@@ -13,6 +13,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCouch } from '@fortawesome/free-solid-svg-icons';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 library.add(faCouch);
 
@@ -37,6 +38,7 @@ function App() {
             <Route path="/blogs" element={<AllBlogs />} />
             <Route path="/admin/blogs" element={<AdminBlogs />} />
           </Routes>
+          <SpeedInsights />
         </div>
       </BrowserRouter>
     </ThemeProvider>
