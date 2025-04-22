@@ -69,7 +69,7 @@ const Navbar = () => {
       transition: 'color 0.3s ease',
       fontFamily: 'Montserrat, sans-serif',
       fontWeight: 700,
-      position: 'relative' // Added for underline positioning
+      position: 'relative'
     },
     mobileMenuButton: {
       display: 'flex',
@@ -160,7 +160,7 @@ const Navbar = () => {
       <div style={navStyles.container}>
         <div style={navStyles.navInner}>
           <div style={navStyles.logoContainer}>
-            <FontAwesomeIcon icon={faCouch} style={navStyles.logoIcon} />
+            <a href="/"><FontAwesomeIcon icon={faCouch} style={navStyles.logoIcon} /></a>
             <a href="/" style={{ ...navStyles.logoText, textDecoration: 'none' }}>Urban Associates</a>
           </div>
 
@@ -175,10 +175,10 @@ const Navbar = () => {
                   className="nav-link-hover"
                   onClick={(e) => {
                     if (link.href.startsWith('#')) {
-                      e.preventDefault(); // Prevent default anchor behavior
+                      e.preventDefault();
                       scrollToSection(link.href);
                       if (isMobile) {
-                        setIsOpen(false); // Close mobile menu after click
+                        setIsOpen(false);
                       }
                     }
                   }}

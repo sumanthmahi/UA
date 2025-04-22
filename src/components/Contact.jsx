@@ -33,9 +33,9 @@ const Contact = () => {
 
   // Handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
+    e.preventDefault(); // prevents the default form submission behavior
+    setLoading(true); // Set loading state to true to indicate submission in progress
+    setError(null); // terminates the previous err messages
 
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
@@ -281,13 +281,13 @@ const Contact = () => {
             </h3>
             <motion.div {...fadeIn} style={{ marginBottom: '2rem' }}>
               <p style={{ fontSize: '1rem', color: isDarkMode ? '#d1d5db' : '#4b5563', marginBottom: '0.5rem' }}>
-                <strong>Email:</strong> Mail ID
+                <strong>Email:</strong> urbanassociated@gmail.com
               </p>
               <p style={{ fontSize: '1rem', color: isDarkMode ? '#d1d5db' : '#4b5563', marginBottom: '0.5rem' }}>
                 <strong>Phone:</strong> +91 0000000000
               </p>
               <p style={{ fontSize: '1rem', color: isDarkMode ? '#d1d5db' : '#4b5563' }}>
-                <strong>Address:</strong> India
+                <strong>Address:</strong> Bengaluru, karnataka, India
               </p>
             </motion.div>
             <motion.div

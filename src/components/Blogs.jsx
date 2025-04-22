@@ -19,7 +19,7 @@ const initialBlogs = [
         title: 'Maximizing Small Spaces: Tips from Urban Associates',
         excerpt: 'Learn how to make the most of compact living areas with smart design solutions.',
         content: 'Small spaces can feel grand with the right approach. Our team at Urban Associates shares expert tips on furniture placement, color choices, and multifunctional decor to enhance your home.',
-        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80',
+        image: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D',
         date: 'April 5, 2025',
         author: 'John Smith'
     },
@@ -28,7 +28,7 @@ const initialBlogs = [
         title: 'Sustainable Design: Building a Greener Future',
         excerpt: 'Explore eco-friendly practices that elevate both style and sustainability.',
         content: 'At Urban Associates, we prioritize sustainable materials and innovative designs to create spaces that are both beautiful and environmentally responsible.',
-        image: 'https://images.unsplash.com/photo-1598928509261-7db39514c2d2?q=80',
+        image: 'https://images.unsplash.com/photo-1537726235470-8504e3beef77?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGludGVyaW9yJTIwZGVzaWdufGVufDB8fDB8fHww',
         date: 'April 1, 2025',
         author: 'Emily Brown'
     }
@@ -48,17 +48,17 @@ const Blogs = () => {
     };
 
     return (
-        <div style={{ 
-            minHeight: '100vh', 
+        <div style={{
+            minHeight: '100vh',
             backgroundColor: isDarkMode ? '#121212' : '#f3f4f6',
-            transition: 'background-color 0.3s' 
+            transition: 'background-color 0.3s'
         }}>
             {/* Hero Section */}
             <section style={{
                 position: 'relative',
                 height: 'clamp(200px, 30vh, 300px)',
-                background: isDarkMode ? 
-                    'linear-gradient(135deg, #000000 0%, #1a1a1a 100%)' : 
+                background: isDarkMode ?
+                    'linear-gradient(135deg, #000000 0%, #1a1a1a 100%)' :
                     'linear-gradient(135deg, #1f2937 0%, #4b5563 100%)',
                 overflow: 'hidden'
             }}>
@@ -118,8 +118,8 @@ const Blogs = () => {
                                     color: isDarkMode ? '#f4f4f4' : '#1f2937',
                                     borderRadius: '0.5rem',
                                     overflow: 'hidden',
-                                    boxShadow: isDarkMode ? 
-                                        '0 4px 6px rgba(255, 255, 255, 0.1)' : 
+                                    boxShadow: isDarkMode ?
+                                        '0 4px 6px rgba(255, 255, 255, 0.1)' :
                                         '0 4px 6px rgba(0, 0, 0, 0.1)',
                                     width: '100%',
                                     minHeight: 'clamp(300px, 40vh, 400px)',

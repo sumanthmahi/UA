@@ -14,25 +14,13 @@ const services = [
     id: 2,
     title: 'Commercial Design',
     description: 'Elevate your business space with functional yet stunning commercial interior designs.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80'
+    image: 'https://plus.unsplash.com/premium_photo-1684348962314-64fa628992f0?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGludGVyaW9yJTIwZGVzaWdufGVufDB8fDB8fHww'
   },
   {
     id: 5,
     title: 'Sustainable Design',
     description: 'Eco-conscious designs that combine beauty with environmental responsibility.',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80'
-  },
-  {
-    id: 6,
-    title: 'Lighting Design',
-    description: 'Illuminate your space with lighting solutions that enhance mood and functionality.',
-    image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80'
-  },
-  {
-    id: 7,
-    title: 'Color Consultation',
-    description: 'Expert guidance in selecting the perfect color palette for your space and personality.',
-    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80'
+    image: 'https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGludGVyaW9yJTIwZGVzaWdufGVufDB8fDB8fHww'
   },
   {
     id: 8,
@@ -84,7 +72,7 @@ const Services = () => {
       backgroundColor: isDarkMode ? '#121212' : '#f8fafc',
       transition: 'background-color 0.3s'
     }}>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         style={{
@@ -133,8 +121,8 @@ const Services = () => {
             style={{
               backgroundColor: isDarkMode ? '#1a1a1a' : '#ffffff',
               color: isDarkMode ? '#f4f4f4' : '#1f2937',
-              boxShadow: isDarkMode ? 
-                '0 4px 6px rgba(255, 255, 255, 0.1)' : 
+              boxShadow: isDarkMode ?
+                '0 4px 6px rgba(255, 255, 255, 0.1)' :
                 '0 4px 6px rgba(0, 0, 0, 0.1)',
               borderRadius: '0.5rem',
               overflow: 'hidden',

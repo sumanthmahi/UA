@@ -10,7 +10,7 @@ const designSteps = [
     id: 1,
     title: "Discovery",
     description: "We begin by understanding your vision, lifestyle, and preferences through detailed consultation.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format",
+    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=800&auto=format&fit=crop",
     icon: <Search style={{ width: 'clamp(24px, 3vw, 32px)', height: 'clamp(24px, 3vw, 32px)', color: '#374151' }} />,
     color: "#f8fafc",
     borderColor: "#e2e8f0",
@@ -21,7 +21,7 @@ const designSteps = [
     title: "Design",
     description:
       "We develop detailed designs featuring vibrant palettes, sustainable local materials, and festive-ready elements, meticulously crafted to reflect your style.",
-    image: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=800&auto=format",
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop",
     icon: <svg style={{ width: 'clamp(24px, 3vw, 32px)', height: 'clamp(24px, 3vw, 32px)', color: '#374151' }} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>,
     color: "#f8fafc",
     borderColor: "#e2e8f0",
@@ -32,7 +32,7 @@ const designSteps = [
     title: "Execution",
     description:
       "Our skilled artisans and trusted vendors execute the design with precision, delivering a timeless space that embodies your vision.",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format",
+    image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=800&auto=format&fit=crop",
     icon: <svg style={{ width: 'clamp(24px, 3vw, 32px)', height: 'clamp(24px, 3vw, 32px)', color: '#374151' }} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>,
     color: "#f8fafc",
     borderColor: "#e2e8f0",

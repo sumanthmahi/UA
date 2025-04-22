@@ -37,6 +37,7 @@ const StyledButton = ({ children, onClick, disabled, style }) => {
             font-weight: bold;
             font-size: 14px;
             transition: all .15s ease;
+            border: 1px solid #333;
           }
 
           .button::before,

@@ -1,6 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
+import { motion } from 'framer-motion';
+import StyledButton from './StyledButton';
 
 const HeroSection = () => {
   const { isDarkMode } = useTheme();
@@ -30,7 +31,8 @@ const HeroSection = () => {
         backgroundPosition: 'center',
         animation: 'zoomIn 20s infinite alternate',
         zIndex: 0,
-      }}></div>
+      }}>
+      </div>
 
       <div style={{
         position: 'absolute',

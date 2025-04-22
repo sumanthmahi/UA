@@ -9,27 +9,23 @@ const Footer = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Animation variants
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
   };
 
-  // Handle newsletter signup
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
 
-    // Basic email validation
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setError('Please enter a valid email address');
       setLoading(false);
       return;
     }
-
-    // Simulate form submission (replace with actual API call in production)
+    // Api calling from backend
     setTimeout(() => {
       console.log('Newsletter Signup:', email);
       setEmail('');
@@ -81,14 +77,13 @@ const Footer = () => {
                 fontSize: 'clamp(0.75rem, 2vw, 0.875rem)',
                 color: 'rgba(255, 255, 255, 0.8)',
                 lineHeight: '1.6',
-                maxWidth: '20rem'
+                maxWidth: '20rem',
+                fontFamily: 'Montserrat, sans-serif',
               }}
             >
               Transforming spaces with timeless elegance and Indian heritage. Let us craft your dream home with bespoke interior design solutions.
             </p>
           </div>
-
-         
 
           {/* Contact Info */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(0.5rem, 2vw, 1rem)' }}>
@@ -99,7 +94,7 @@ const Footer = () => {
                 marginBottom: 'clamp(0.5rem, 2vw, 1rem)'
               }}
             >
-             Follow Us 
+              Follow Us
             </h3>
             <div
               style={{
@@ -178,8 +173,7 @@ const Footer = () => {
                 style={{
                   width: '100%',
                   padding: 'clamp(0.5rem, 2vw, 0.75rem)',
-                  border: '1px solid #d1d5db',
-                  borderRadius: '0.375rem',
+                  border: '3px solid #000',
                   fontSize: 'clamp(0.75rem, 2vw, 0.875rem)',
                   backgroundColor: '#f9fafb',
                   outline: 'none',
@@ -245,7 +239,7 @@ const Footer = () => {
               color: 'rgba(255, 255, 255, 0.8)'
             }}
           >
-            <Link
+            {/* <Link
               to="/privacy-policy"
               style={{
                 color: 'rgba(255, 255, 255, 0.8)',
@@ -256,8 +250,8 @@ const Footer = () => {
               onMouseOut={(e) => (e.target.style.color = 'rgba(255, 255, 255, 0.8)')}
             >
               Privacy Policy
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               to="/terms-of-service"
               style={{
                 color: 'rgba(255, 255, 255, 0.8)',
@@ -268,7 +262,7 @@ const Footer = () => {
               onMouseOut={(e) => (e.target.style.color = 'rgba(255, 255, 255, 0.8)')}
             >
               Terms of Service
-            </Link>
+            </Link> */}
           </div>
         </motion.div>
       </div>

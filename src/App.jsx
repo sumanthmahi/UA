@@ -6,6 +6,7 @@ import Blogs from './components/Blogs';
 import Services from './components/Services';
 import Design from './components/Design';
 import Contact from './components/Contact';
+import Projects from './components/Projects'
 import Footer from './components/Footer';
 import AllBlogs from './components/Allblogs/AllBlogs';
 import AdminBlogs from './components/Admin/AdminBlogs';
@@ -29,6 +30,8 @@ function App() {
                 <HeroSection />
                 <div id="about"><About /></div>
                 <Blogs />
+                <div id="projects"></div>
+                <Projects />
                 <div id="services"><Services /></div>
                 <Design />
                 <div id="contact"><Contact /></div>
