@@ -7,6 +7,7 @@ const Projects = () => {
         projects: {
             padding: '4rem 0',
             transition: 'all 0.5s ease',
+            fontFamily: 'Montserrat'
         },
         projectsLight: {
             backgroundColor: '#f8f9fa',
