@@ -51,7 +51,7 @@ const Blogs = () => {
         <div style={{
             minHeight: '100vh',
             backgroundColor: isDarkMode ? '#121212' : '#f3f4f6',
-            transition: 'background-color 0.3s'
+            transition: 'background-color 0.3s',
         }}>
             {/* Hero Section */}
             <section style={{

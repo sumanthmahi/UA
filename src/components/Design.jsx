@@ -80,7 +80,7 @@ const roomTemplates = {
     { type: "rug", x: 30, y: 35, width: 20, height: 5 },
   ],
   "Pooja Room": [
-    { type: "poojaUnit", x: 10, y: 10, width: 20, height: 20 }, // Northeast for Vastu
+    { type: "poojaUnit", x: 10, y: 10, width: 20, height: 20 },
     { type: "lamp", x: 40, y: 10, width: 10, height: 10 },
     { type: "rug", x: 15, y: 35, width: 15, height: 5 },
   ],
@@ -1022,7 +1022,10 @@ const Design = () => {
             </p>
             <StyledButton
               afterContent="Book Now"
-              onClick={() => alert('functionality not implemented yet')}
+              onClick={() => {
+                const element = document.getElementById('contact');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Schedule a Consultation
             </StyledButton>

@@ -30,16 +30,17 @@ function App() {
                 <HeroSection />
                 <div id="about"><About /></div>
                 <Blogs />
-                <div id="projects"></div>
-                <Projects />
+                {/* <div id="projects"></div>
+                <Projects /> */}
                 <div id="services"><Services /></div>
                 <Design />
                 <div id="contact"><Contact /></div>
                 <Footer />
               </>
             } />
-            <Route path="/blogs" element={<AllBlogs />} />
+
             <Route path="/admin/blogs" element={<AdminBlogs />} />
+            <Route path="/blogs" element={<AllBlogs />} />
           </Routes>
           <SpeedInsights />
         </div>

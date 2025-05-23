@@ -6,7 +6,21 @@ import { useTheme } from '../context/ThemeContext';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const { isDarkMode, toggleTheme } = useTheme();
+
+  // Add scroll progress calculation
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const currentScroll = window.pageYOffset;
+      const scrollPercentage = (currentScroll / totalScroll) * 100;
+      setScrollProgress(scrollPercentage);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Style constants
   const navStyles = {
@@ -35,24 +49,24 @@ const Navbar = () => {
     logoContainer: {
       display: 'flex',
       alignItems: 'center',
-      flexShrink: 0
+      flexShrink: 0,
     },
     logoIcon: {
       fontSize: '2rem',
-      color: isDarkMode ? '#ffffff' : '#000000',
+      color: '#FF6B00', // Changed to orange
       marginRight: '0.5rem',
       transition: 'color 0.3s ease'
     },
     logoText: {
       fontSize: '1.5rem',
-      color: isDarkMode ? '#ffffff' : '#000000',
+      color: '#FF6B00', // Changed to orange
       fontWeight: 600,
       marginRight: 'auto',
       transition: 'color 0.3s ease'
     },
     mobileLogoText: {
       fontSize: '1.2rem',
-      color: isDarkMode ? '#ffffff' : '#000000',
+      color: '#FF6B00', // Changed to orange
       fontWeight: 'bold',
       marginRight: 'auto',
       transition: 'color 0.3s ease'
@@ -62,13 +76,13 @@ const Navbar = () => {
       gap: '2rem'
     },
     navLink: {
-      color: isDarkMode ? '#ffffff' : ' #000000',
+      color: '#FF6B00', // Changed to orange
       textDecoration: 'none',
       fontSize: '1rem',
       padding: '0.5rem',
       transition: 'color 0.3s ease',
       fontFamily: 'Montserrat, sans-serif',
-      fontWeight: 700,
+      fontWeight: 800,
       position: 'relative'
     },
     mobileMenuButton: {
@@ -107,7 +121,7 @@ const Navbar = () => {
     mobileLink: {
       display: 'block',
       padding: '0.75rem',
-      color: isDarkMode ? '#ffffff' : '#000000',
+      color: '#FF6B00', // Changed to orange
       textDecoration: 'none',
       fontSize: '1rem',
       transition: 'all 0.3s',
@@ -120,11 +134,23 @@ const Navbar = () => {
       cursor: 'pointer',
       padding: '0.5rem',
       marginLeft: '1rem',
-      color: isDarkMode ? '#ffffff' : '#000000',
+      // color: isDarkMode ? '#ffffff' : '#000000',
+      color: '#FF6800',
       transition: 'color 0.3s ease'
+    },
+    progressLine: {
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      height: '2px',
+      backgroundColor: '#FF6B00',
+      transform: `scaleX(${scrollProgress / 100})`,
+      transformOrigin: 'left',
+      transition: 'transform 0.2s ease-out',
+      willChange: 'transform',
+      width: '100%'
     }
   };
-
   // Navigation links data
   const navLinks = [
     { name: 'Blogs', href: '/blogs' },
@@ -157,6 +183,8 @@ const Navbar = () => {
 
   return (
     <nav style={navStyles.nav}>
+      {/* Add progress line as first child of nav */}
+      <div style={navStyles.progressLine} />
       <div style={navStyles.container}>
         <div style={navStyles.navInner}>
           <div style={navStyles.logoContainer}>
@@ -310,7 +338,7 @@ const Navbar = () => {
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: ${isDarkMode ? '#ffffff' : '#000000'};
+            background-color: #FF6B00; // Changed to orange
             transition: width 0.3s ease-in-out;
           }
           

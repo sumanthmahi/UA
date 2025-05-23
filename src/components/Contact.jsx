@@ -87,7 +87,6 @@ const Contact = () => {
           Have a project in mind? Fill out the form below or contact us directly.
         </p>
       </motion.div>
-
       <div style={{
         maxWidth: '1200px',
         margin: '0 auto'
@@ -185,8 +184,14 @@ const Contact = () => {
                   name="phone"
                   type="tel"
                   value={formData.phone}
-                  onChange={handleInputChange}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (/^\d{0,10}$/.test(value)) {
+                      handleInputChange(e);
+                    }
+                  }}
                   placeholder="Your Phone"
+                  maxLength={10}
                   style={{
                     width: '100%',
                     padding: '0.75rem',
@@ -199,6 +204,7 @@ const Contact = () => {
                     transition: 'background-color 0.3s, border-color 0.3s, color 0.3s'
                   }}
                 />
+
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 <label
@@ -265,7 +271,7 @@ const Contact = () => {
               disabled={loading}
               afterContent={loading ? 'Sending...' : 'Send'}
             >
-              {loading ? 'Sending...' : 'Send Message'}
+              {loading ? 'Sending...' : 'Enquire Now'}
             </StyledButton>
           </div>
 
@@ -284,7 +290,7 @@ const Contact = () => {
                 <strong>Email:</strong> urbanassociated@gmail.com
               </p>
               <p style={{ fontSize: '1rem', color: isDarkMode ? '#d1d5db' : '#4b5563', marginBottom: '0.5rem' }}>
-                <strong>Phone:</strong> +91 0000000000
+                <strong>Phone:</strong> +91 8147472078
               </p>
               <p style={{ fontSize: '1rem', color: isDarkMode ? '#d1d5db' : '#4b5563' }}>
                 <strong>Address:</strong> Bengaluru, karnataka, India
@@ -307,12 +313,12 @@ const Contact = () => {
                 title="Office Location"
               ></iframe>
             </motion.div>
-            <StyledButton
+            {/* <StyledButton
               onClick={() => alert('functionality not implemented yet')}
               afterContent="Schedule Now"
             >
               Book a Free Consultation
-            </StyledButton>
+            </StyledButton> */}
           </div>
         </motion.div>
 

@@ -18,7 +18,8 @@ const AllBlogs = () => {
         position: 'relative',
         height: '30vh',
         background: 'linear-gradient(135deg, #1f2937 0%, #4b5563 100%)',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        marginTop: '-9vh'
       }}>
         <div style={{
           position: 'relative',
