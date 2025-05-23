@@ -1,99 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="couch.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Urban Associates</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <!-- Framer Motion replacement with basic CSS animations -->
   <style>
+    /* Webkit browsers (Chrome, Safari) */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #8B4513;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #703611;
+    }
+
+    /* Firefox */
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      transition: all 0.3s ease;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* Dark mode styles */
-    body.dark-mode {
-      background-color: #121212;
-      color: #f4f4f4;
-    }
-
-    /* Navigation Styles */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(8px);
-      background-color: rgba(255, 255, 255, 0.9);
-    }
-
-    .dark-mode .navbar {
-      background-color: rgba(18, 18, 18, 0.9);
-    }
-
-    .nav-container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-link {
-      text-decoration: none;
-      color: inherit;
-      position: relative;
-      font-weight: 500;
-    }
-
-    .nav-link::after {
-      content: '';
+      scrollbar-width: thin;
+      scrollbar-color: #8B4513 #f1f1f1;
     }
   </style>
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <i class="fas fa-couch"></i>
-        Urban Associates
-      </a>
-      <div class="nav-links">
-        <a href="#" class="nav-link">Home</a>
-        <a href="#" class="nav-link">About</a>
-        <a href="#" class="nav-link">Services</a>
-        <a href="#" class="nav-link">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>
