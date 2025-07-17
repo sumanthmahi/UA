@@ -290,7 +290,7 @@ const Contact = () => {
                 <strong>Email:</strong> urbanassociated@gmail.com
               </p>
               <p style={{ fontSize: '1rem', color: isDarkMode ? '#d1d5db' : '#4b5563', marginBottom: '0.5rem' }}>
-                <strong>Phone:</strong> +91 8147472078
+                <strong>Phone:</strong> +91 0000000000
               </p>
               <p style={{ fontSize: '1rem', color: isDarkMode ? '#d1d5db' : '#4b5563' }}>
                 <strong>Address:</strong> Bengaluru, karnataka, India
