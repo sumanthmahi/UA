@@ -10,7 +10,8 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/sumanthmahi/UA.git'
+                git url: 'https://github.com/sumanthmahi/UA.git', branch: 'main'
+
             }
         }
 
